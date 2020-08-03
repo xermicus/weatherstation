@@ -1,0 +1,12 @@
+[Unit]
+Description=Temperature and humidity sensor measurements
+AssertPathExists=/usr/bin/probe.py
+
+[Service]
+User=pi
+Type=exec
+ExecStart=/usr/bin/probe.py
+
+[Install]
+WantedBy=multi-user.target
+
