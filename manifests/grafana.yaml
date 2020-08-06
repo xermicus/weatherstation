@@ -1,0 +1,13 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: grafana
+  namespace: kube-system
+spec:
+  chart: stable/grafana
+  targetNamespace: default
+  valuesContent: |-
+    ingress:
+      enabled: true
+      hosts:
+        - "weather.station"
