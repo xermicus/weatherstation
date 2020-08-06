@@ -13,7 +13,7 @@ spec:
       ingress:
         enabled: true
         hosts:
-          - probes.local
+          - probes.station
     extraScrapeConfigs: |-
       - job_name: probes
         static_configs:
