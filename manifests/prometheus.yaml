@@ -1,0 +1,23 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: probes
+  namespace: kube-system
+spec:
+  chart: stable/prometheus
+  targetNamespace: default
+  valuesContent: |-
+    alertmanager:
+      enabled: false
+    server:
+      ingress:
+        enabled: true
+        hosts:
+          - probes.local
+    extraScrapeConfigs: |-
+      - job_name: probes
+        static_configs:
+          - targets: 
+            - 192.168.178.139:8000
+            - 192.168.178.26:8000
+            - 192.168.178.18:8000
