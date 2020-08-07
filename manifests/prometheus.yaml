@@ -14,10 +14,20 @@ spec:
         enabled: true
         hosts:
           - probes.station
+      hostAliases:
+        - ip: 192.168.178.139
+          hostnames:
+            - balkon
+        - ip: 192.168.178.26
+          hostnames:
+            - zimmer
+        - ip: 192.168.178.18
+          hostnames:
+            - stobe
     extraScrapeConfigs: |-
       - job_name: probes
         static_configs:
           - targets: 
-            - 192.168.178.139:8000
-            - 192.168.178.26:8000
-            - 192.168.178.18:8000
+            - balkon:8000
+            - zimmer:8000
+            - stobe:8000
