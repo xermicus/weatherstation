@@ -33,13 +33,13 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 8,
-        "w": 12,
+        "h": 11,
+        "w": 24,
         "x": 0,
         "y": 0
       },
       "hiddenSeries": false,
-      "id": 4,
+      "id": 2,
       "legend": {
         "avg": false,
         "current": false,
@@ -63,9 +63,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg_over_time(sensor_humidity_percentage[1m])",
+          "expr": "avg_over_time(sensor_temperature_celcius[1h])",
           "interval": "",
-          "legendFormat": "{{hostname}}",
+          "legendFormat": "{{ instance }}",
           "refId": "A"
         }
       ],
@@ -73,7 +73,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Humidity",
+      "title": "Temperature",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -125,13 +125,13 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 9,
-        "w": 12,
+        "h": 10,
+        "w": 24,
         "x": 0,
-        "y": 8
+        "y": 11
       },
       "hiddenSeries": false,
-      "id": 2,
+      "id": 4,
       "legend": {
         "avg": false,
         "current": false,
@@ -155,9 +155,9 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "avg_over_time(sensor_temperature_celcius[1m])",
+          "expr": "avg_over_time(sensor_humidity_percentage[1h])",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "{{ instance }}",
           "refId": "A"
         }
       ],
@@ -165,7 +165,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Temperature",
+      "title": "Humidity",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -203,6 +203,7 @@
       }
     }
   ],
+  "refresh": false,
   "schemaVersion": 26,
   "style": "dark",
   "tags": [],
@@ -210,7 +211,7 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-2d",
     "to": "now"
   },
   "timepicker": {
@@ -229,5 +230,5 @@
   "timezone": "",
   "title": "Weather",
   "uid": "lpJiQGIMk",
-  "version": 3
+  "version": 8
 }

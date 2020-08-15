@@ -20,7 +20,7 @@ sudo ufw allow from 10.42.0.0/16 to any
 sudo ufw allow from 10.43.0.0/16 to any
 ```
 
-# First impressions
+# End Result
 ![](hardware.jpg)
 
 ![](dashboard.png)
